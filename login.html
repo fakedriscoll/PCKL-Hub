@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Eventos Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+        }
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+        }
+        .login-hint {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #f5f5f5;
+            font-size: 0.8rem;
+            border-left: 3px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Acesso ao Sistema</h1>
+            <p>Faça login para continuar</p>
+        </div>
+    </header>
+
+    <main class="container login-container">
+        <div class="card login-card">
+            <h2>Identifique-se</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Entre com seu usuário e senha.</p>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" placeholder="Seu usuário" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Sua senha" required>
+                </div>
+
+                <div id="login-error" style="color: #ff4444; font-size: 0.9rem; display: none; margin-bottom: 1rem;">
+                    Usuário ou senha incorretos.
+                </div>
+
+                <button type="submit" class="btn">ENTRAR NO SISTEMA</button>
+            </form>
+
+            <div class="login-hint">
+                <strong>Dica de Acesso:</strong><br>
+                ADM: <code>admin</code> / <code>admin123</code><br>
+                Usuário: <code>usuario</code> / <code>123456</code>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Eventos Pro. Design em Preto e Branco.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
