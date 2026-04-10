@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | PCKL Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70vh;
+        }
+        .login-card {
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PCKL Hub</h1>
+            <p>Crie sua conta para participar dos eventos</p>
+        </div>
+    </header>
+
+    <main class="container login-container">
+        <div class="card login-card">
+            <h2>Criar Conta</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">Preencha os dados abaixo.</p>
+            
+            <form id="register-form">
+                <div class="form-group">
+                    <label for="reg-name">Nome Completo</label>
+                    <input type="text" id="reg-name" placeholder="Seu nome" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">E-mail</label>
+                    <input type="email" id="reg-email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password">Senha</label>
+                    <input type="password" id="reg-password" placeholder="Crie uma senha" required>
+                </div>
+
+                <div id="register-error" style="color: #ff4444; font-size: 0.9rem; display: none; margin-bottom: 1rem;">
+                    Este e-mail já está cadastrado.
+                </div>
+
+                <button type="submit" class="btn">REGISTRAR AGORA</button>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">
+                    Já tem uma conta? <a href="login.html" style="color: #000; font-weight: 700;">Faça login aqui</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 PCKL Hub. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK via CDN -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+
+    <script>
+        // Inicializar Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyDOM0XDng7PdFac-8ESBFJcuyDq29u6JwU",
+            authDomain: "pckl-hub.firebaseapp.com",
+            projectId: "pckl-hub",
+            storageBucket: "pckl-hub.firebasestorage.app",
+            messagingSenderId: "754256735890",
+            appId: "1:754256735890:web:ad82bc115ab70f15c4404b"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
